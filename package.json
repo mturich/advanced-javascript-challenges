@@ -3,13 +3,22 @@
   "private": true,
   "description": "some javascript exercises",
   "scripts": {
-    "test": "echo \"Error: run npm test from inside the challange directories or do 'npm run test-all'\" && exit 1",
-    "test-all": "mocha '**/test.js'"
+    "test_warning": "echo \"Error: run npm test from inside the challange directories or do 'npm run test-all'\" && exit 1",
+    "test": "mocha '**/map/test.js'",
+    "test-all": "mocha '**/test.js'",
+    "start": "tsc ./map/index.ts && node ./map/index.js"
   },
   "author": "Moshe Kolodny",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
     "mocha": "^2.2.4",
     "sinon": "^1.15.3"
+  },
+  "dependencies": {
+    "typescript": "^4.8.4"
   }
 }

@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "node ../node_modules/mocha/bin/mocha"
+    "start": "tsc ./index.ts && node ./index.js",
+    "test": "npm run start && node ../node_modules/mocha/bin/mocha"
   }
 }
